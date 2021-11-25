@@ -3,16 +3,20 @@
 {% set old_fct_orders_query %}
   select
     order_id,
-    order_value_dollars,
-    customer_id
+    customer_id,
+    fdos,
+    total_amount_paid,
+    customer_sales_seq
   from {{ ref('customer_orders') }}
 {% endset %}
 
 {% set new_fct_orders_query %}
   select
     order_id,
-    order_value_dollars,
-    customer_id
+    customer_id,
+    fdos,
+    total_amount_paid,
+    customer_sales_seq
   from {{ ref('fct_customer_orders') }}
 {% endset %}
 

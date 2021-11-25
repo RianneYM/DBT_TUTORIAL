@@ -13,8 +13,10 @@ with a as (
     
   select
     order_id,
-    order_value_dollars,
-    customer_id
+    customer_id,
+    fdos,
+    total_amount_paid,
+    customer_sales_seq
   from RAW.jaffle_shop.customer_orders
 
 
@@ -25,8 +27,10 @@ b as (
     
   select
     order_id,
-    order_value_dollars,
-    customer_id
+    customer_id,
+    fdos,
+    total_amount_paid,
+    customer_sales_seq
   from RAW.jaffle_shop.fct_customer_orders
 
 

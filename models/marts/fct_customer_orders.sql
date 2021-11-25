@@ -4,19 +4,19 @@ with
 
 customers as (
 
-    select * from RAW.jaffle_shop.stg_customers
+    select * from {{ ref('stg_customers') }}
 
 ),
 
 orders as (
 
-    select * from RAW.jaffle_shop.stg_orders
+    select * from {{ ref('stg_orders') }}
 
 ),
 
 payments as (
 
-    select * from RAW.jaffle_shop.stg_payments
+    select * from {{ ref('stg_payments') }}
 
 ),
 
@@ -66,3 +66,4 @@ final as (
 -- simple select statement
 
 select * from final
+

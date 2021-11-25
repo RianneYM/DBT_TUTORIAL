@@ -1,10 +1,8 @@
-
-  create or replace  view RAW.jaffle_shop.stg_payments  as (
-    with
+with
 
 source as (
 
-    select * from raw.stripe.payment
+    select * from {{ source('stripe', 'payment') }}
 
 ),
 
@@ -23,4 +21,3 @@ transformed as (
 )
 
 select * from transformed
-  );
