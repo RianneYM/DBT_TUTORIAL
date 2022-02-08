@@ -1,13 +1,13 @@
 default:
   outputs:
     dev:
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
-      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
-      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
+      account: "{{ env_var('snowflake_account') }}"
+      database: "{{ env_var('snowflake_database') }}"
+      password: "{{ env_var('snowflake_password') }}"
+      role: "{{ env_var('snowflake_role') }}"
+      schema: "{{ env_var('snowflake_schema') }}"
       threads: 200
       type: snowflake
-      user: "{{ env_var('SNOWFLAKE_USER') }}"
-      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+      user: "{{ env_var('snowflake_username') }}"
+      warehouse: "{{ env_var('snowflake_warehouse') }}"
   target: dev
